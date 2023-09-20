@@ -10,6 +10,7 @@ interface BaseButtonProps extends Pick<ButtonProps, 'onClick' | 'type' | 'startI
   color?: 'default' | 'primary' | 'secondary' | 'dark' | 'light'
   size?: 'small' | 'medium' | 'large'
   disableHoverEffect?: boolean
+
 }
 interface StyledButtonRootProps extends BaseButtonProps {
   theme?: Theme
@@ -27,7 +28,7 @@ const StyledButtonRoot = styled('button', {
   lineHeight: 1.5,
   letterSpacing: 1,
   borderRadius: Number(theme.shape.borderRadius) * 3,
-
+  
   display: 'inline-flex',
   alignItems: 'center',
   userSelect: 'none',
@@ -95,8 +96,8 @@ const StyledButtonRoot = styled('button', {
     }),
   ...(color === 'primary' &&
     variant === 'contained' && {
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.primary.contrastText,
+      backgroundColor: theme.palette.primary.light,
+      color: theme.palette.primary.dark,
       boxShadow: '0 6px 22px 0 rgb(18 124 113 / 12%)',
     }),
   ...(color === 'secondary' &&
