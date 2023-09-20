@@ -161,14 +161,15 @@ const HomeHero: FC = () => {
             <Box
               sx={{
                 position: 'absolute',
-                bottom: 30,
+                // bottom: 30,
+                bottom: { xs: 390, md:30 },
                 left: { xs: 0, md: -150 },
                 boxShadow: 1,
                 borderRadius: 3,
                 px: 2,
                 py: 1.4,
                 zIndex: 1,
-                backgroundColor: 'background.paper',
+                backgroundColor: 'transparent',
                 display: 'flex',
                 alignItems: 'flex-start',
                 width: 170,
