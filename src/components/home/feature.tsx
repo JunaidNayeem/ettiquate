@@ -46,8 +46,9 @@ const HomeFeature: FC = () => {
               <Box
                 sx={{
                   position: 'absolute',
-                  top: -36,
-                  right: { xs: 0, md: -36 },
+                  // top: -36,
+                  top: { xs: -90, md: -80},
+                  right: { xs: -30, md: -46 },
                   boxShadow: 2,
                   borderRadius: 1,
                   px: 2.2,
