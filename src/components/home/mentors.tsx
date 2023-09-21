@@ -95,10 +95,44 @@ const HomeOurMentors: FC = () => {
     >
       <Container maxWidth="lg">
         <Grid container spacing={1}>
-        <Typography variant="h1" sx={{ fontSize: 40, md:"20px", pd:"20px", pt:"20px" }}>
-        Meet Our Founder and CEO - Angela
 
-        </Typography>
+        <Typography
+              component="h2"
+              sx={{
+                position: 'relative',
+                fontSize: { xs: 36, md: 46 },
+                mt: { xs: 0, md: 7 },
+                mb: 4,
+                lineHeight: 1,
+                fontWeight: 'bold',
+              }}
+            >
+              Meet Our Founder and CEO -{' '}
+              <Typography
+                component="mark"
+                sx={{
+                  position: 'relative',
+                  color: 'primary.main',
+                  fontSize: 'inherit',
+                  fontWeight: 'inherit',
+                  backgroundColor: 'unset',
+                }}
+              >
+                Angela{' '}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: { xs: 20, md: 28 },
+                    left: 2,
+                    '& img': { width: { xs: 130, md: 175 }, height: 'auto' },
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/headline-curve.svg" alt="Headline curve" />
+                </Box>
+              </Typography>
+              
+            </Typography>
 
         {/* <Slider {...sliderConfig}>
           {data.map((item) => (
