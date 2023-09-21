@@ -85,7 +85,7 @@ const HomeNewsLetter: FC = () => {
   // const { readValue, handleSubmit } = useForm(
   // )
   return (
-    <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 } }}>
+    <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10,  }, width:{md: "100%", xs: "100%"} }}>
       <form onSubmit={handleSubmit}>
         <Container>
           <Box
@@ -93,6 +93,7 @@ const HomeNewsLetter: FC = () => {
               // background:"url('/images/bg1.jpg')" ,
               backgroundColor: 'primary.main',
               borderRadius: 10,
+              width: { xs:"90%", md:"100%"},
               py: { xs: 4, md: 10 },
               px: { xs: 4, md: 8 },
               textAlign: 'center',
@@ -108,6 +109,7 @@ const HomeNewsLetter: FC = () => {
                 fontSize: { xs: 36, md: 46 },
                 mt: { xs: 0, md: 0 },
                 mb: 3,
+                width:"100%",
                 lineHeight: 1,
                 fontWeight: 'bold',
               }}
@@ -161,7 +163,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: '80%',
+                    width:{md: "80%", xs: "90%"},
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -190,7 +192,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: '80%',
+                    width:{md: "80%", xs: "90%"},
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -220,7 +222,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: { xs: '80%', md: "30%" },
+                    width: { xs: '90%', md: "30%" },
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -235,7 +237,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: { xs: '80%', md: "30%" },
+                    width: { xs: '90%', md: "30%" },
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -264,7 +266,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: '80%',
+                    width:{md: "80%", xs: "90%"},
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -298,7 +300,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: '80%',
+                    width:{md: "80%", xs: "90%"},
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -327,7 +329,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: '80%',
+                    width:{md: "80%", xs: "90%"},
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -357,7 +359,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: { xs: '80%', md: "30%" },
+                    width: { xs: '90%', md: "30%" },
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -373,7 +375,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: { xs: '80%', md: "30%" },
+                    width: { xs: '90%', md: "30%" },
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },
@@ -403,7 +405,7 @@ const HomeNewsLetter: FC = () => {
                   sx={{
                     backgroundColor: 'background.paper',
                     borderRadius: 3,
-                    width: '80%',
+                    width:{md: "80%", xs: "90%"},
                     height: 48,
                     px: 2,
                     mr: { xs: 0, md: 3 },

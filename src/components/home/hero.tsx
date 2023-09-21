@@ -160,10 +160,11 @@ const HomeHero: FC = () => {
             {/* Sertificate badge */}
             <Box
               sx={{
-                position: 'absolute',
+                // position: 'absolute',
                 // bottom: 30,
-                bottom: { xs: 390, md:30 },
-                left: { xs: 0, md: -150 },
+                bottom: { xs: -10, md:30 },
+                position: {xs:"relative",md:"absolute"},
+                left: { xs: "25%", md: -150 },
                 boxShadow: 1,
                 borderRadius: 3,
                 px: 2,
@@ -203,7 +204,7 @@ const HomeHero: FC = () => {
               </Box>
             </Box>
             <br />
-            <Box sx={{ lineHeight: 1 }}>
+            <Box sx={{ lineHeight: 1 ,left: { xs: "5%" },position: {xs:"relative",md:"absolute"},}}>
               <Image src="/images/home-hero.jpg" width={500} height={500} alt="Hero img" style={{marginLeft:'70px'}} />
             </Box>
           </Grid>

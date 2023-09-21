@@ -37,7 +37,7 @@ const BorderLinearProgress = styled(LinearProgress, {
 
 const HomeFeature: FC = () => {
   return (
-    <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
+    <Box id="feature" sx={{ py: { xs: 20, md: 14 }, backgroundColor: 'background.paper' }}>
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={5}>
@@ -47,33 +47,36 @@ const HomeFeature: FC = () => {
                 sx={{
                   position: 'absolute',
                   // top: -36,
-                  top: { xs: -90, md: -120},
-                  right: { xs: -30, md: -50 },
+                  // position:{xs: "relative", md:'absolute'},
+                  top: { xs: -160, md: -120},
+                  right: { xs: 0, md: -50 },
                   boxShadow: 2,
                   borderRadius: 1,
                   px: 2.2,
                   py: 1.4,
                   zIndex: 1,
                   backgroundColor: 'transparent',
-                  width: 190,
+                  // width: 190,
+                  width:{ xs: "100%", md:190},
+                 
                 }}
               >
                 <Typography variant="h6" sx={{ mb: 1 }}>
                 EmbellisHer PinQ LLC
                 </Typography>
-                <Box sx={{ mb: 0 }}>
+                <Box sx={{ mb: 1 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                   Greeting and Communicating Effectively
                   </Typography>
                   <BorderLinearProgress variant="determinate" color="inherit" value={65} order={1} />
                 </Box>
-                <Box sx={{ mb: 2 }}>
+                <Box sx={{ mb: 1 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                   Table Manners and Tea Party Etiquette
                   </Typography>
                   <BorderLinearProgress variant="determinate" color="inherit" value={40} order={2} />
                 </Box>
-                <Box sx={{ mb: 2 }}>
+                <Box sx={{ mb: 1 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                   Posture and Grace
                   </Typography>
