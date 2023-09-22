@@ -11,7 +11,8 @@ import { Form } from 'react-hook-form'
 import Typography from '@mui/material/Typography'
 import { StyledButton } from '../styled-button'
 import axios from 'axios'
-import { Alert } from '@mui/material'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface FormProps {
   onSubmit: (data: FormData) => void
@@ -32,12 +33,7 @@ interface FormData {
 
 // function HomeNewsLetter({ onSubmit }: FormProps) {
 const HomeNewsLetter: FC = () => {
-  const [alertData, setAlertData] = useState({
-    type: '',
-    message: '',
-    show: false,
-  })
-
+  
   const [formData, setFormData] = React.useState<FormData>({
     firstName: '',
     lastName: '',
@@ -68,14 +64,10 @@ const HomeNewsLetter: FC = () => {
 
       console.log('data created successfully.')
 
-      setAlertData({
-        type: 'success',
-        message: 'Details sent successfully!',
-        show: true,
-      })
+      toast.success('Details sent successfully!')
     } catch (error) {
-      console.error('Error creating contact us:', error)
-      console.log('error')
+      console.error('Error creating form:', error)
+      toast.error('Duplicate Email or Phone Number')
     }
   }
 
@@ -508,15 +500,10 @@ const HomeNewsLetter: FC = () => {
                 padding: '20px',
               }}
             >
-              {alertData.show && (
-                <Alert icon={false} severity="success" onClose={() => setAlertData({ ...alertData, show: false })}>
-                  Details send successfully!
-                </Alert>
-              )}
+              
+             <ToastContainer autoClose={3000} position={'top-right'} theme={'light'} />
             </Box>
-            {/* <Alert icon={false} severity="success">
-              This is a success alert — check it out!
-            </Alert> */}
+            
             <Box>
               <StyledButton type="submit" size="large">
                 Register
