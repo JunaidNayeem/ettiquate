@@ -48,7 +48,7 @@ const HomeFeature: FC = () => {
                   position: 'absolute',
                   // top: -36,
                   // position:{xs: "relative", md:'absolute'},
-                  top: { xs: -160, md: 550},
+                  top: { xs: -160, md: 540},
                   right: { xs: 0, md: 0 },
                   boxShadow: 2,
                   borderRadius: 1,
