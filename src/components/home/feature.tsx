@@ -41,15 +41,15 @@ const HomeFeature: FC = () => {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={5}>
-            <Box sx={{ position: 'relative' }}>
+            <Box sx={{ position: 'relative', pt: {md:"50px"} }}>
               <Image src="/images/image1.jpeg" width={650} height={678} quality={97} alt="Feature img" />
               <Box
                 sx={{
                   position: 'absolute',
                   // top: -36,
                   // position:{xs: "relative", md:'absolute'},
-                  top: { xs: -160, md: -120},
-                  right: { xs: 0, md: -50 },
+                  top: { xs: -160, md: 550},
+                  right: { xs: 0, md: 0 },
                   boxShadow: 2,
                   borderRadius: 1,
                   px: 2.2,
@@ -57,7 +57,7 @@ const HomeFeature: FC = () => {
                   zIndex: 1,
                   backgroundColor: 'transparent',
                   // width: 190,
-                  width:{ xs: "100%", md:190},
+                  width:{ xs: "100%", md:260},
                  
                 }}
               >
@@ -96,15 +96,18 @@ const HomeFeature: FC = () => {
                   zIndex: 1,
                   backgroundColor: 'transparent',
                   textAlign: 'center',
+                  mt: '-60px'
                 }}
               >
                 <Box
                   sx={{
-                    position: 'relative',
+                    position: { xs:'relative', md:'absolute'},
+                    // position: 'absolute',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexDirection: 'column',
+                    mt: '70px'
                   }}
                 >
                   <Typography sx={{ fontWeight: 500, lineHeight: 1 }}>EmbellisHer PinQ LLC</Typography>
