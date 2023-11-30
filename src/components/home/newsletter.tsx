@@ -19,22 +19,22 @@ interface FormProps {
 }
 
 interface FormData {
-  firstName: ''
-  lastName: ''
-  dob: ''
-  grade: ''
-  allergy: ''
-  firstName1: ''
-  lastName1: ''
-  cellPhone: ''
-  workPhone: ''
-  email: ''
+  firstName: string;
+  lastName: string;
+  dob: string;
+  grade: string;
+  allergy: string;
+  firstName1: string;
+  lastName1: string;
+  cellPhone: string;
+  workPhone: string;
+  email: string;
 }
 
 // function HomeNewsLetter({ onSubmit }: FormProps) {
 const HomeNewsLetter: FC = () => {
   
-  const [formData, setFormData] = React.useState<FormData>({
+  const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     dob: '',
@@ -45,31 +45,29 @@ const HomeNewsLetter: FC = () => {
     cellPhone: '',
     workPhone: '',
     email: '',
-  })
+  });
 
-  const readValue = function (event: React.ChangeEvent<HTMLInputElement>): void {
-    const { name, value } = event.target
-    setFormData({ ...formData, [name]: value })
-  }
+  const readValue = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
-    event.preventDefault()
+    event.preventDefault();
 
     try {
-      await axios.post(`http://localhost:4000/api/v1/create`, formData, {
+      await axios.post(`https://ettiquiate-be-new.onrender.com/send-email`, formData, {
         headers: {
           'Content-Type': 'application/json',
         },
-      })
+      });
 
-      console.log('data created successfully.')
-
-      toast.success('Details sent successfully!')
+      toast.success('Details sent successfully!');
     } catch (error) {
-      console.error('Error creating form:', error)
-      toast.error('Duplicate Email or Phone Number')
+      console.error('Error creating form:', error);
+      toast.error('Error sending form data');
     }
-  }
+  };
 
   return (
     <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 }, width: { md: '100%', xs: '100%' } }}>
