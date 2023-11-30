@@ -56,7 +56,7 @@ const HomeNewsLetter: FC = () => {
     event.preventDefault()
 
     try {
-      await axios.post(`https://ettiquiate-be.onrender.com/api/v1/create`, formData, {
+      await axios.post(`http://localhost:4000/api/v1/create`, formData, {
         headers: {
           'Content-Type': 'application/json',
         },
